@@ -1,0 +1,162 @@
+@media print {
+  @page {
+    size: A3 landscape; /* Set the page size to A3 and landscape orientation */
+    margin: 0; /* Remove default margins */
+  }
+  body {
+    margin: 0; /* Remove default body margin */
+  }
+}
+
+ .container{
+    display:flex;
+    justify-content: space-around;
+   
+  
+  
+  }
+  .flex{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .heading{
+    font-family:sans-serif;
+    font-weight: 600;
+  }
+  
+  
+  
+/*   
+  table.minimalistBlack {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.minimalistBlack td, table.minimalistBlack th {
+    padding: 5px 4px;
+  }
+  table.minimalistBlack tbody td {
+    font-size: 13px;
+  
+  }
+  table.minimalistBlack tbody td{
+  
+    font-size: 12px;
+  
+    color: #000000;
+    text-align: left;
+  
+  }
+  table.minimalistBlack thead {
+    background: #F9F9F9;
+    background: -moz-linear-gradient(top, #fafafa 0%, #f9f9f9 66%, #F9F9F9 100%);
+    background: -webkit-linear-gradient(top, #fafafa 0%, #f9f9f9 66%, #F9F9F9 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #f9f9f9 66%, #F9F9F9 100%);
+    border-bottom: 3px solid #000000;
+  }
+  table.minimalistBlack thead th {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.minimalistBlack thead th:first-child {
+    border-left: none;
+  }
+  
+  table.minimalistBlack tfoot {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+  }
+  table.minimalistBlack tfoot td {
+    font-size: 12px;
+    table-layout: auto;
+    width: 180px;
+  } */
+  
+  
+  
+  
+  @media print {
+    @page {
+      size: A3 landscape;
+    }
+  }
+  
+  .tableData:click{
+    width:50em;
+  
+  
+  }
+ 
+
+  .scroll-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px; /* adjust height as needed */
+  }
+  
+   
+   .dataTable .table-container {
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    h1{
+     
+        white-space: nowrap;
+    
+    }
+    
+    th, td {
+      overflow-x: auto;
+      width: calc(100% / 30);
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #ccc;
+  
+    }
+
+    .slider {
+      width: 500px; /* or whatever width you want */
+  
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    th:nth-child(-n+30) {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background-color: #fff;
+    }
+    
+    td:nth-child(-n+30) {
+      position: sticky;
+      left: 0;
+      z-index: 0;
+      background-color: #f2f2f2;
+    }
+   
+    
+    

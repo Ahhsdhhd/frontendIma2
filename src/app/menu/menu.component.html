@@ -1,0 +1,88 @@
+<mat-toolbar>
+  <mat-icon
+    aria-hidden="false"
+    aria-label="Example home icon"
+    fontIcon="home"
+    [routerLink]="['/menu']"
+    routerLinkActive="router-link-active"
+  >
+  </mat-icon>
+  <span>MENU</span>
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-content>
+    <div id="container">
+      <div id="first">
+        <div class="grid-container">
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b1"
+              class="small_btn"
+              [routerLink]="['/payBill']"
+              routerLinkActive="router-link-active"
+            >
+              OPS
+            </button>
+          </div>
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b2"
+              class="small_btn"
+              [routerLink]="['/Nps']"
+              routerLinkActive="router-link-active"
+            >
+              NPS
+            </button>
+          </div>
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b3"
+              class="small_btn"
+              [routerLink]="['/Reports']"
+              routerLinkActive="router-link-active"
+            >
+              REPORTS
+            </button>
+          </div>
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b4"
+              class="small_btn"
+              [routerLink]="['/Admin']"
+              routerLinkActive="router-link-active"
+            >
+              ADMIN
+            </button>
+          </div>
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b5"
+              class="small_btn"
+              [routerLink]="['/Loans']"
+              routerLinkActive="router-link-active"
+            >
+              LOANS
+            </button>
+          </div>
+          <div class="grid-item">
+            <button
+              type="button"
+              id="b6"
+              class="small_btn"
+              [routerLink]="['/Saved']"
+              routerLinkActive="router-link-active"
+            >
+              SAVED
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

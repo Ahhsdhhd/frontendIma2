@@ -1,0 +1,338 @@
+
+<mat-toolbar color="primary">
+  
+  <span> <mat-icon [routerLink]="['/menu']" routerLinkActive="router-link-active" >home</mat-icon> </span>
+     <span style=" margin-right: 50%; margin-left: 50%; font-size: 2em;">
+        IMA</span>
+ 
+ 
+ </mat-toolbar> 
+ 
+ 
+ 
+ 
+ <form [formGroup]="addPaybill">
+   <div id="print-section">
+     <div class="flex">
+       <p class="heading">
+         REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+         <input type="text" placeholder="month year" formControlName="month" /> &nbsp; &nbsp; &nbsp;
+         <input type="text" placeholder="type" formControlName="type" /> &nbsp;&nbsp; OF IMA,
+         DEHRADUN
+       </p>
+     </div>
+     <div
+       class="container"
+       style="
+         border-top: 1px dashed #0b0a0a;
+         border-bottom: 1px dashed #100f0f !important;
+       "
+     >
+       <p class="earning">EARNING</p>
+       <p class="deduction">DEDUCTION</p>
+     </div>
+ 
+     <table class="minimalistBlack">
+       <thead>
+         <tr>
+         
+ 
+           <th>IMA.NO</th>
+ 
+           <th>DEGN</th>
+           <th>NAME</th>
+           <th>DOB</th>
+           <th>BP</th>
+           <th>PP</th>
+           <th>GP</th>
+           <th>DA</th>
+           <th>HRA</th>
+           <th>HCA</th>
+           <th>TPA</th>
+           <th>TPA_DA</th>
+           <th>WA</th>
+           <th>ARR</th>
+           <th>MISC</th>
+           <th>GROSS PAY</th>
+           <th>GPF SUBS</th>
+           <th>GPF REC</th>
+           <th>FA</th>
+           <th>MCA LOAN</th>
+           <th>C0M LOAN</th>
+           <th>CGEIS</th>
+           <th>RENT</th>
+           <th>IT</th>
+           <th>MISC</th>
+           <th>EOL</th>
+           <th>GROSS DED</th>
+           <th>NET PAY</th>
+           <th>REMARK</th>
+         </tr>
+         <tr>
+          
+           <td>
+             <input style="width: 40px" type="text" formControlName="imaNo" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="degn" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="name" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="date" formControlName="dob" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="bp" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="pp" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="gp" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="da" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="hra" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="hca" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="tpa" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="tpa_da" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="wa" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="arr" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="misc1" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="grossPay" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="gpfSubs" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="gpfRec" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="fa" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="cgeis" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="rent" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="misc2" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="eol" />
+           </td>
+ 
+           <td><input style="width: 40px" type="text" /></td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="netPay" />
+           </td>
+ 
+           <td>
+             <input style="width: 40px" type="text" formControlName="remark" />
+           </td>
+         </tr>
+ 
+         <!-- tableData -->
+       
+       </thead>
+     </table>
+   </div>
+  
+   
+   <mat-expansion-panel 
+   >
+ <mat-expansion-panel-header>
+ <mat-panel-title >
+   REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+ <h1  *ngFor="let listpaybill of listpaybill">{{listpaybill.month}} {{listpaybill.year}} {{listpaybill.type}}</h1>
+     IMA DEHRADUN
+ </mat-panel-title>
+ 
+ </mat-expansion-panel-header>
+
+ REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+ <h1  *ngFor="let listpaybill of listpaybill">{{listpaybill.month}} {{listpaybill.year}} {{listpaybill.type}}</h1>
+     IMA DEHRADUN
+ 
+ <div
+   class="container"
+   style="
+     border-top: 1px dashed #0b0a0a;
+     border-bottom: 1px dashed #100f0f !important;
+   "
+ >
+   <p class="earning">EARNING</p>
+   <p class="deduction">DEDUCTION</p>
+ </div>
+ 
+ <tr>
+ <th>S.NO</th>
+ 
+ <th>IMA.NO</th>
+ 
+ <th>DEGN</th>
+ <th>NAME</th>
+ <th>DOB</th>
+ <th>BP</th>
+ <th>PP</th>
+ <th>GP</th>
+ <th>DA</th>
+ <th>HRA</th>
+ <th>HCA</th>
+ <th>TPA</th>
+ <th>TPA_DA</th>
+ <th>WA</th>
+ <th>ARR</th>
+ <th>MISC</th>
+ <th>GROSS PAY</th>
+ <th>GPF SUBS</th>
+ <th>GPF REC</th>
+ <th>FA</th>
+ <th>MCA LOAN</th>
+ <th>C0M LOAN</th>
+ <th>CGEIS</th>
+ <th>RENT</th>
+ <th>IT</th>
+ <th>MISC</th>
+ <th>EOL</th>
+ <th>GROSS DED</th>
+ <th>NET PAY</th>
+ <th>REMARK</th>
+ </tr>
+ 
+ <tr *ngFor="let listpaybill of listpaybill ; let i = index" >
+ <td>{{i + 1}}</td>
+ 
+ <td>{{ listpaybill.imaNo }}</td>
+ 
+ <td>{{ listpaybill.degn }}</td>
+ 
+ <td>{{ listpaybill.name }}</td>
+ 
+ <td>{{ listpaybill.dob }}</td>
+ 
+ <td>{{ listpaybill.bp }}</td>
+ 
+ <td>{{ listpaybill.pp }}</td>
+ 
+ <td>{{ listpaybill.gp}}</td>
+ 
+ <td>{{ listpaybill.da}}</td>
+ 
+ <td>{{ listpaybill.hra}}</td>
+ 
+ <td>{{ listpaybill.hca}}</td>
+ 
+ <td>{{ listpaybill.tpa}}</td>
+ 
+ <td>{{ listpaybill.tpa_da}}</td>
+ 
+ <td>{{ listpaybill.wa}}</td>
+ 
+ <td>{{ listpaybill.arr}}</td>
+ 
+ <td>{{ listpaybill.misc1}}</td>
+ 
+ <td>{{ listpaybill.grossPay}}</td>
+ 
+ <td>{{ listpaybill.gpfSubs}}</td>
+ 
+ <td>{{ listpaybill.gpfRec}}</td>
+ 
+ <td>{{ listpaybill.fa}}</td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>{{ listpaybill.cgeis}}</td>
+ 
+ <td>{{ listpaybill.rent}}</td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>{{ listpaybill.misc2}}</td>
+ 
+ <td>{{ listpaybill.eol}}</td>
+ 
+ <td><input style="width: 40px" type="text" /></td>
+ 
+ <td>{{ listpaybill.netPay}}</td>
+ 
+ <td>{{ listpaybill.remark}}</td>
+ </tr>
+ </mat-expansion-panel>
+ 
+ 
+   <button
+     mat-raised-button
+     class="printerButton"
+     [useExistingCss]="true"
+     printSectionId="print-section"
+     ngxPrint
+   >
+     print
+   </button>
+ 
+   <button mat-raised-button color="primary" (click)="onSubmit()">ADD</button>
+ </form>
+ 

@@ -1,0 +1,335 @@
+
+<mat-toolbar color="primary">
+  
+  <span> <mat-icon [routerLink]="['/menu']" routerLinkActive="router-link-active" >home</mat-icon> </span>
+     <span style=" margin-right: 50%; margin-left: 50%; font-size: 2em;">
+        IMA</span>
+ 
+ 
+ </mat-toolbar> 
+<mat-card>
+  <mat-card-content>
+
+
+
+     
+     
+     
+     
+       
+       <mat-expansion-panel (opened)="panelOpenState = true"
+       (closed)="panelOpenState = false">
+     <mat-expansion-panel-header>
+     <mat-panel-title >
+       REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+     <h1  *ngFor="let item of data">{{item.month}} {{item.year}} {{item.type}}</h1>
+         IMA DEHRADUN
+     </mat-panel-title>
+     
+     </mat-expansion-panel-header>
+     
+     <div
+       class="container"
+       style="
+         border-top: 1px dashed #0b0a0a;
+         border-bottom: 1px dashed #100f0f !important;
+       "
+     >
+       <p class="earning">EARNING</p>
+       <p class="deduction">DEDUCTION</p>
+     </div>
+     
+     <tr>
+     <th>S.NO</th>
+     
+     <th>IMA.NO</th>
+     
+     <th>DEGN</th>
+     <th>NAME</th>
+     <th>DOB</th>
+     <th>BP</th>
+     <th>PP</th>
+     <th>GP</th>
+     <th>DA</th>
+     <th>HRA</th>
+     <th>HCA</th>
+     <th>TPA</th>
+     <th>TPA_DA</th>
+     <th>WA</th>
+     <th>ARR</th>
+     <th>MISC</th>
+     <th>GROSS PAY</th>
+     <th>GPF SUBS</th>
+     <th>GPF REC</th>
+     <th>FA</th>
+     <th>MCA LOAN</th>
+     <th>C0M LOAN</th>
+     <th>CGEIS</th>
+     <th>RENT</th>
+     <th>IT</th>
+     <th>MISC</th>
+     <th>EOL</th>
+     <th>GROSS DED</th>
+     <th>NET PAY</th>
+     <th>REMARK</th>
+     <th>
+      ACTION
+     </tr>
+     
+     <tr *ngFor="let listpaybill of listpaybill ; let i = index" >
+      <td>{{i + 1}}</td>
+      
+      <td>{{ listpaybill.imaNo }}</td>
+      
+      <td>{{ listpaybill.degn }}</td>
+      
+      <td>{{ listpaybill.name }}</td>
+      
+      <td>{{ listpaybill.dob }}</td>
+      
+      <td>{{ listpaybill.bp }}</td>
+      
+      <td>{{ listpaybill.pp }}</td>
+      
+      <td>{{ listpaybill.gp}}</td>
+      
+      <td>{{ listpaybill.da}}</td>
+      
+      <td>{{ listpaybill.hra}}</td>
+      
+      <td>{{ listpaybill.hca}}</td>
+      
+      <td>{{ listpaybill.tpa}}</td>
+      
+      <td>{{ listpaybill.tpa_da}}</td>
+      
+      <td>{{ listpaybill.wa}}</td>
+      
+      <td>{{ listpaybill.arr}}</td>
+      
+      <td>{{ listpaybill.misc1}}</td>
+      
+      <td>{{ listpaybill.grossPay}}</td>
+      
+      <td>{{ listpaybill.gpfSubs}}</td>
+      
+      <td>{{ listpaybill.gpfRec}}</td>
+      
+      <td>{{ listpaybill.fa}}</td>
+      
+      <td>
+      <input style="width: 40px" type="text" />
+      </td>
+      
+      <td>
+      <input style="width: 40px" type="text" />
+      </td>
+      
+      <td>{{ listpaybill.cgeis}}</td>
+      
+      <td>{{ listpaybill.rent}}</td>
+      
+      <td>
+      <input style="width: 40px" type="text" />
+      </td>
+      
+      <td>{{ listpaybill.misc2}}</td>
+      
+      <td>{{ listpaybill.eol}}</td>
+      
+      <td><input style="width: 40px" type="text" /></td>
+      
+      <td>{{ listpaybill.netPay}}</td>
+      
+      <td>{{ listpaybill.remark}}</td>
+     <td> <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+      <mat-icon>edit</mat-icon>
+     </button>
+     
+    </td>
+    <td><button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+      <mat-icon>delete</mat-icon>
+     </button></td>
+
+
+     
+     </tr>
+     </mat-expansion-panel>
+     
+     
+       <button
+         mat-raised-button
+         class="printerButton"
+         [useExistingCss]="true"
+         printSectionId="print-section"
+         ngxPrint
+       >
+         print
+       </button>
+     
+      
+    
+
+  </mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>
+
+
+<mat-card>
+
+  
+     
+       
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title >
+  REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+<h1  *ngFor="let item of data">{{item.month}} {{item.year}} {{item.type}}</h1>
+    IMA DEHRADUN
+</mat-panel-title>
+
+</mat-expansion-panel-header>
+REGULAR PAY BILL FOR THE MONTH OF &nbsp;
+<h1  *ngFor="let item of data">{{item.month}} {{item.year}} {{item.type}}</h1>
+    IMA DEHRADUN
+
+<div
+  class="container"
+  style="
+    border-top: 1px dashed #0b0a0a;
+    border-bottom: 1px dashed #100f0f !important;
+  "
+>
+  <p class="earning">EARNING</p>
+  <p class="deduction">DEDUCTION</p>
+</div>
+
+<tr>
+<th>S.NO</th>
+
+<th>IMA.NO</th>
+
+<th>DEGN</th>
+<th>NAME</th>
+<th>DOB</th>
+<th>BP</th>
+<th>PP</th>
+<th>GP</th>
+<th>DA</th>
+<th>HRA</th>
+<th>HCA</th>
+<th>TPA</th>
+<th>TPA_DA</th>
+<th>WA</th>
+<th>ARR</th>
+<th>MISC</th>
+<th>GROSS PAY</th>
+<th>GPF SUBS</th>
+<th>GPF REC</th>
+<th>FA</th>
+<th>MCA LOAN</th>
+<th>C0M LOAN</th>
+<th>CGEIS</th>
+<th>RENT</th>
+<th>IT</th>
+<th>MISC</th>
+<th>EOL</th>
+<th>GROSS DED</th>
+<th>NET PAY</th>
+<th>REMARK</th>
+<th>
+ ACTION
+</tr>
+
+<tr *ngFor="let listpaybill of listpaybill ; let i = index" >
+ <td>{{i + 1}}</td>
+ 
+ <td>{{ listpaybill.imaNo }}</td>
+ 
+ <td>{{ listpaybill.degn }}</td>
+ 
+ <td>{{ listpaybill.name }}</td>
+ 
+ <td>{{ listpaybill.dob }}</td>
+ 
+ <td>{{ listpaybill.bp }}</td>
+ 
+ <td>{{ listpaybill.pp }}</td>
+ 
+ <td>{{ listpaybill.gp}}</td>
+ 
+ <td>{{ listpaybill.da}}</td>
+ 
+ <td>{{ listpaybill.hra}}</td>
+ 
+ <td>{{ listpaybill.hca}}</td>
+ 
+ <td>{{ listpaybill.tpa}}</td>
+ 
+ <td>{{ listpaybill.tpa_da}}</td>
+ 
+ <td>{{ listpaybill.wa}}</td>
+ 
+ <td>{{ listpaybill.arr}}</td>
+ 
+ <td>{{ listpaybill.misc1}}</td>
+ 
+ <td>{{ listpaybill.grossPay}}</td>
+ 
+ <td>{{ listpaybill.gpfSubs}}</td>
+ 
+ <td>{{ listpaybill.gpfRec}}</td>
+ 
+ <td>{{ listpaybill.fa}}</td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>{{ listpaybill.cgeis}}</td>
+ 
+ <td>{{ listpaybill.rent}}</td>
+ 
+ <td>
+ <input style="width: 40px" type="text" />
+ </td>
+ 
+ <td>{{ listpaybill.misc2}}</td>
+ 
+ <td>{{ listpaybill.eol}}</td>
+ 
+ <td><input style="width: 40px" type="text" /></td>
+ 
+ <td>{{ listpaybill.netPay}}</td>
+ 
+ <td>{{ listpaybill.remark}}</td>
+<td> <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+ <mat-icon>edit</mat-icon>
+</button>
+
+</td>
+<td><button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+ <mat-icon>delete</mat-icon>
+</button></td>
+
+
+
+</tr>
+</mat-expansion-panel>
+
+
+  <button
+    mat-raised-button
+    class="printerButton"
+    [useExistingCss]="true"
+    printSectionId="print-section"
+    ngxPrint
+  >
+    print
+  </button>
+</mat-card>
